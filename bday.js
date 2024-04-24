@@ -7,7 +7,6 @@ function timeoutLoader() {
    let result = localStorage.getItem('result')
     setTimeout(()=>{
         loader.style.display = "none"; 
-        console.log(result);
     }, 6000);  
     
     displayName(result);
@@ -19,7 +18,7 @@ function displayName(name) {
 }
 
 function createConfetti() {
-    const colors = ['#ffcc00', '#ff6699', '#66ccff', '#99ff99', '#ff9999']; // Add more colors as needed
+    const colors = ['#ffcc00', '#ff6699', '#66ccff', '#99ff99', '#ff9999']; 
     const confetti = document.createElement('div');
     confetti.classList.add('confetti');
     confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
@@ -28,7 +27,7 @@ function createConfetti() {
     document.getElementById('confetti-container').appendChild(confetti);
     setTimeout(() => {
       confetti.remove();
-    }, 7000); // Remove confetti after 4 seconds
+    }, 7000); 
   }
 
 
